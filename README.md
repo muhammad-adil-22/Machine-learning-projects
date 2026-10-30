@@ -100,7 +100,7 @@ pip install pandas numpy scikit-learn xgboost joblib streamlit
 
  Project Structure
 
-A possible project folder structure is:
+Project folder structure:
 
 ```text
 House-Price-Prediction/
