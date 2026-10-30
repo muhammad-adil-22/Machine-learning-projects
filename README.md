@@ -1,15 +1,15 @@
-# House Price Prediction Using Machine Learning
+ House Price Prediction Using Machine Learning
 
-## Project Overview
+ Project Overview
 
 This project predicts residential house prices using machine learning regression models. It uses selected features from the house-sales dataset, applies preprocessing to numerical and categorical data, compares three regression algorithms, and selects XGBoost as the final model based on held-out validation performance.
 
 The project also includes a Streamlit interface so a user can enter house information and receive a predicted price.
 
-## Dataset
+ Dataset
 
 **Dataset link:**  
-[Add dataset URL here]
+https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
 
 The project dataset was supplied in CSV format and included:
 - `train.csv` — training data, including the target column `SalePrice`.
@@ -18,7 +18,7 @@ The project dataset was supplied in CSV format and included:
 
 The validation metrics reported below were calculated using a held-out split from the labelled training data. They were **not** calculated on `test.csv`, because that file does not contain the actual house prices needed for evaluation.
 
-## Features Used
+ Features Used
 
 The final model uses these 11 input features:
 
@@ -36,7 +36,7 @@ The final model uses these 11 input features:
 
 The target variable is `SalePrice`.
 
-## Workflow
+ Workflow
 
 1. **Load and inspect the data**  
    Load the CSV files with pandas, inspect the columns and data types, and separate the target (`SalePrice`) from the input features.
@@ -65,7 +65,7 @@ The target variable is `SalePrice`.
 8. **Use the Streamlit application**  
    The app accepts house-feature values, applies the same preprocessing used during training, and displays the model's predicted house price.
 
-## Validation Results
+ Validation Results
 
 | Model | MAE | RMSLE | MSE | R² |
 |---|---:|---:|---:|---:|
@@ -75,14 +75,14 @@ The target variable is `SalePrice`.
 
 *Values are rounded for readability. These are held-out validation results from the labelled training data.*
 
-### Metric meanings
+ Metric meanings
 
 - **MAE (Mean Absolute Error):** average absolute difference between predicted and actual prices. Lower is better.
 - **RMSLE (Root Mean Squared Logarithmic Error):** measures prediction error on a logarithmic scale, useful when the target values vary considerably. Lower is better.
 - **MSE (Mean Squared Error):** average squared prediction error, which penalizes larger errors more heavily. Lower is better.
 - **R² (Coefficient of Determination):** indicates how much variation in the target is explained by the model. A value closer to 1 is generally better.
 
-## Running the Streamlit App
+ Running the Streamlit App
 
 Open a terminal in the project directory, install the required packages if needed, and run:
 
@@ -98,7 +98,7 @@ Typical packages used in this project include:
 pip install pandas numpy scikit-learn xgboost joblib streamlit
 ```
 
-## Project Structure
+ Project Structure
 
 A possible project folder structure is:
 
@@ -115,7 +115,7 @@ House-Price-Prediction/
 
 Keep the saved model and preprocessing files in the locations expected by `app.py`.
 
-## Important Notes and Limitations
+ Important Notes and Limitations
 
 - The model is trained using only the 11 selected features; new inputs must provide those same features.
 - Categorical values must be represented consistently with the categories expected by the app and preprocessing pipeline.
@@ -123,7 +123,7 @@ Keep the saved model and preprocessing files in the locations expected by `app.p
 - `test.csv` has no target labels, so its predictions cannot be evaluated unless the true prices become available.
 - The model's predictions are estimates, not guaranteed market valuations.
 
-## Tools and Libraries
+ Tools and Libraries
 
 - Python
 - pandas and NumPy
@@ -132,6 +132,4 @@ Keep the saved model and preprocessing files in the locations expected by `app.p
 - joblib
 - Streamlit
 
-## Author
-
-**Name:** Mian Muhammad Adil
+Name: Mian Muhammad Adil
